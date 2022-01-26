@@ -88,8 +88,10 @@ docker-integer-simple: | integer-simple
 clean:
 	@rm -rf root
 
-push:
+tag: | docker-integer-gmp
 	@docker tag espial-scratch:integer-gmp jonschoning/espial:scratch
+
+push:
 	@docker push jonschoning/espial:scratch
 
 .PHONY: default docker-integer-gmp docker-integer-simple clean push
